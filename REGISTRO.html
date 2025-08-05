@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login e Registro</title>
+  <link rel="stylesheet" href="REGISTRO.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+<header>
+  <nav class="navbar">
+        <div class="container2">
+        <a href="pagina-principal.html" class="btn-voltar">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1>REGISTRO</h1>
+    </div>
+  </nav>
+</header> 
+
+  <div class="container">
+    <div class="form-box">
+      <div class="toggle-box">
+        <button class="toggle-btn active" onclick="showLogin()">Entrar</button>
+        <button class="toggle-btn" onclick="showRegister()">Registrar</button>
+      </div>
+
+      <form id="login-form" class="form active">
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" required />
+          <label>Usuário</label>
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" required />
+          <label>Senha</label>
+        </div>
+        <button type="submit" class="submit-btn">Entrar</button>
+      </form>
+
+      <form id="register-form" class="form">
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" required />
+          <label>Nome completo</label>
+        </div>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" required />
+          <label>Email</label>
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" required />
+          <label>Senha</label>
+        </div>
+        <button type="submit" class="submit-btn">Registrar</button>
+      </form>
+    </div>
+  </div>
+  <script src="Registro.js"></script>
+</body>
+</html>

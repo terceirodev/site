@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(to right, #003366, #0055aa);
+  color: white;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 40px;
+}
+
+/* Botão voltar do lado esquerdo */
+.btn-voltar {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-voltar:hover {
+  color: #cccccc;
+}
+
+form {
+  background: white;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+button {
+  background: linear-gradient(to right, #003366, #0055aa);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4b54d3;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsividade - mantém tudo alinhado e texto menor se quiser */
+@media (max-width: 768px) {
+  form {
+    margin: 1rem 1rem 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  input, select, button {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
