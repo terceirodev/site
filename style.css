@@ -1,345 +1,238 @@
+@font-face{
+  font-family: 'Kollegan';
+  src: url('Kollegan.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #003366;
+  --secondary: #facc15;
+  --text: #333;
+  --bg: #f9f9f9;
+}
+
 * {
-    
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f9f9f9;
-    color: #333;
-    min-height: 100vh;
-  }
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 header {
-    text-align: center;
-    padding: 50px 20px 20px 20px;
-    background: linear-gradient(to right, #003366, #0055aa);
-    color: white;
+  background-color: var(--primary);
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 28px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+/*hero Section */
+.hero {
+  background: linear-gradient(to right, #003366, #0055aa);
+  color: white;
+  text-align: center;
+  padding: 160px 20px;
+  background-image: url('CICALLLT 2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background: var(--secondary);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hero button:hover {
+  background: #eab308;
+}
+
+/*etnico Section*/
+.etnico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.racial h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  font-family: 'Kollegan', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: normal;
+  font-size: 80px;
+  color: black;
+  text-align: center;
+}
+
+.racial h4 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: -10px;
+  font-family: 'Kollegan', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  color: black;
+  text-align: center; 
+}
+
+.imagens-etnico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imagens-etnico img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  padding: 0;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+/*footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--primary);
+  color: white;
+}
+
+/*responsivo*/
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.8rem;
   }
-  
-  header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 18px;
+
+  .hero p {
+    font-size: 1rem;
   }
 
-
-.calendar-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(to right, #003366, #0055aa);
-    color: white;
-}
-
-.calendar-title {
-    margin: 0;
-    font-size: 24px;
-}
-
-.calendar-nav {
-    display: flex;
-    gap: 10px;
-}
-
-.calendar-nav button {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.calendar-nav button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    background-color: #f1f1f1;
-    padding: 10px 0;
-    text-align: center;
-    font-weight: bold;
-}
-
-.days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1px;
-    background-color: #e0e0e0;
-}
-
-.day {
-    min-height: 100px;
-    padding: 8px;
-    background-color: white;
-    position: relative;
-}
-
-.day:hover {
-    background-color: #f9f9f9;
-}
-
-.day-number {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.other-month {
-    color: #aaa;
-    background-color: #f9f9f9;
-}
-
-.today {
-    background-color: #e8f4fe;
-}
-
-.today .day-number {
-    color: #4285f4;
-    font-weight: bold;
-}
-
-.event {
-    font-size: 12px;
-    padding: 3px 6px;
-    margin-bottom: 3px;
-    border-radius: 3px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.view-mode .day {
-    cursor: default;
-}
-
-.view-mode .event {
-    background-color: #e8f5e9;
-    color: linear-gradient(to right, #003366, #0055aa);
-    cursor: default;
-}
-
-.admin-mode .day {
-    cursor: pointer;
-}
-
-.admin-mode .event {
-    background-color: #e1f5fe;
-    color: #0288d1;
-    cursor: pointer;
-}
-
-.admin-mode {
-    box-shadow: 0 0 0 3px #4285f4;
-}
-
-.event-form {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+  .hero button {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    justify-content: center;
-    align-items: center;
-}
+    max-width: 300px;
+  }
 
-.form-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-}
-
-.form-header {
-    display: flex;
+  header .container {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-}
+  }
 
-.form-title {
-    margin: 0;
-    color: #4285f4;
-}
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #777;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
+  .menu-toggle {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
+  }
 
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.form-group textarea {
-    min-height: 80px;
-    resize: vertical;
-}
-
-.form-actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.form-actions button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.save-btn {
-   background: linear-gradient(to right, #003366, #0055aa);
-    color: white;
-}
-
-.delete-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-.cancel-btn {
-    background-color: #f1f1f1;
-}
-
-.admin-controls {
-    max-width: 900px;
-    margin: 0 auto 20px;
-    text-align: right;
-    padding: 10px;
-}
-
-#admin-login {
-    background: linear-gradient(to right, #003366, #0055aa);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-#admin-login:hover {
-    background-color: #3367d6;
-}
-
-#admin-status {
-    margin-left: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
-.login-modal {
+  .menu-links {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 200;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-}
-
-.login-container input {
-    width: 100%;
-    box-sizing: border-box;
-    border: solid                                                                                                                                                                                              
-    
-    ;
-}
-
-
-.login-container h2 {
-    margin-top: 0;
-    color: linear-gradient(to right, #003366, #0055aa);
-    text-align: center;
-}
-
-@media (max-width: 600px) {
-    .day {
-        min-height: 70px;
-        font-size: 14px;
-    }
-    
-    .event {
-        font-size: 10px;
-        padding: 2px 4px;
-    }
-}
-
- header {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .btn-voltar {
+    flex-direction: column;
+    background-color: var(--primary);
     position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+    z-index: 999;
+  }
+
+  .menu-links.active {
+    display: flex;
+  }
+
+  .menu-links a {
+    color: white;
+    padding: 10px 0;
+    display: block;
+  }
+
+  /*fonte menor para títulos no responsivo*/
+  .racial h3 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  .racial h4 {
     font-size: 24px;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+    margin-bottom: 30px;
   }
-  
-  .btn-voltar:hover {
-    color: #555;
+
+  .imagens-etnico {
+    gap: 15px;
   }
-  
- 
+
+  .imagens-etnico img {
+    max-width: 90vw;
+    margin: 8px 0;
+  }
+}

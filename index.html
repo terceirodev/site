@@ -1,98 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendário de Eventos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CICALT - Site CICALT</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <div class="container">
+      <h1>CICALT</h1>
+      <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu-links" id="menu">
+          <a href="Cursos.html">Cursos</a>
+          <a href="Matricula.html">Matricula</a>
+          <a href="index.html">Calendário</a>
+          <a href="https://cicalt.blogspot.com/">Blog</a>
+          <a href="historia.html"> História</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-  <a href="pagina-principal.html" class="btn-voltar">
-    <i class="fas fa-arrow-left"></i>
-  </a>
-  <h1> Explore nossos Eventos</h1>
-  <p>Venha Participar Você também</p>
-</header>
+  <section class="hero">
+    <div class="container">
+      <h2>Transforme seu futuro no Cicalt</h2>
+      <p>qualidade e inovação</p>
+      <button onclick="window.location.href='REGISTRO.html'">CADASTRO</button>
+    </div>
+  </section>
 
-    <div class="admin-controls">
-        <button id="admin-login">Login Admin</button>
-        <span id="admin-status"></span>
-    </div>
-    
-    <div class="calendar-container" id="calendar-container">
-        <div class="calendar-header">
-            <h1 class="calendar-title">Calendário</h1>
-            <div class="calendar-nav">
-                <button id="prev-month">&lt; Mês Anterior</button>
-                <button id="next-month">Próximo Mês &gt;</button>
-            </div>
-        </div>
-        <div class="weekdays">
-            <div>Dom</div>
-            <div>Seg</div>
-            <div>Ter</div>
-            <div>Qua</div>
-            <div>Qui</div>
-            <div>Sex</div>
-            <div>Sáb</div>
-        </div>
-        <div class="days" id="calendar-days"></div>
-    </div>
-    
-    <div class="event-form" id="event-form">
-        <div class="form-container">
-            <div class="form-header">
-                <h2 class="form-title" id="form-title">Adicionar Evento</h2>
-                <button class="close-btn" id="close-form">&times;</button>
-            </div>
-            <form id="event-data">
-                <input type="hidden" id="event-date">
-                <input type="hidden" id="event-id">
-                <div class="form-group">
-                    <label for="event-title">Título</label>
-                    <input type="text" id="event-title" required>
-                </div>
-                <div class="form-group">
-                    <label for="event-description">Descrição</label>
-                    <textarea id="event-description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="event-time">Hora</label>
-                    <input type="time" id="event-time">
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="delete-btn" id="delete-btn">Excluir</button>
-                    <button type="button" class="cancel-btn" id="cancel-btn">Cancelar</button>
-                    <button type="submit" class="save-btn">Salvar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <div class="login-modal" id="login-modal">
-        <div class="login-container">
-            <h2>Login de Administrador</h2>
-            <form id="login-form">
-                <div clas+..s="form-group">
-                    <label for="admin-username">Usuário</label>
-                    <input type="text" id="admin-username" required>
-                </div>
-                <div class="form-group">
-                    <label for="admin-password">Senha</label>
-                    <input type="password" id="admin-password" required>
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="cancel-btn" id="login-cancel">Cancelar</button>
-                    <button type="submit" class="save-btn">Entrar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
-    
+  <footer>
+    <p>© 2025 CICALT Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
