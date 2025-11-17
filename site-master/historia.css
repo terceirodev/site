@@ -1,0 +1,172 @@
+/* Variáveis de Cores (Boas para manter) */
+:root {
+    --primary: #003366; /* Azul escuro */
+    --secondary: #facc15; /* Amarelo */
+    --text: #333; /* Cinza escuro para texto */
+    --bg: #f9f9f9; /* Fundo claro */
+}
+  
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+a {
+    color:#f9f9f9;
+    background-color: #003366;
+}
+
+body {
+    background-image: url('https://vidasimples.co/wp-content/uploads/2024/06/historia-de-vida-livros-patrick-tomasso-Oaqk7qqNh_c-unsplash-1024x625.webp');
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--text);
+    min-height: 100vh; /* Garante que o body ocupa a altura total da tela */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Container genérico para centralizar conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; /* Garante que o container ocupe a largura total disponível */
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 0;
+    position: sticky; /* Mantém o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Garante que o header ocupe a largura total */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+  header .voltar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+  }
+  .btn-voltar {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    color: #cccccc;
+}
+  
+header .container {
+    display: flex;
+    justify-content: space-between; /* Espaça o título e a navegação */
+    align-items: center; /* Alinha verticalmente */
+}
+  
+header h1 {
+    margin: 0; /* Remove margem padrão do h1 no header */
+    font-size: 2em; /* Tamanho da fonte do título */
+    color: white; /* Garante que a cor seja branca */
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Estilos para o Quadro Transparente (Conteúdo principal) */
+.quadro-transparente {
+    background-color: rgba(255, 255, 255, 0.9); /* Um pouco mais opaco */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais suave */
+    padding: 30px;
+    max-width: 800px; /* Aumentei um pouco a largura para melhor leitura */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    margin: 100px auto 40px auto; /* Margem superior para não ficar atrás do header fixo */
+    border-radius: 10px;
+    overflow-y: auto; /* Permite rolagem interna se o conteúdo for muito longo */
+}
+
+.quadro-transparente h1 {
+    text-align: center;
+    color: var(--primary); /* Usa a variável de cor primária */
+    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+.quadro-transparente p {
+    text-align: justify;
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.7; /* Aumentei o espaçamento entre linhas */
+    font-size: 1.05em; /* Levemente maior para melhor leitura */
+    margin-bottom: 18px;
+}
+
+/* Estilos do Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.9em;
+    width: 100%; /* Garante que o rodapé ocupe a largura total */
+    margin-top: auto; /* Empurra o rodapé para baixo */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+p{
+    text-indent: 1em;
+}
+@media (min-width: 769px) {
+    .btn-voltar {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    header h1 {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+/* Media Query para telas menores (celular e tablet) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Coloca os itens em coluna */
+        text-align: center;
+    }
+    
+    header nav {
+        margin-top: 10px; /* Adiciona um espaço entre o título e o link */
+    }
+
+    .voltar {
+        position: absolute; /* Posição fixa para o botão voltar */
+        top: 20px;
+        left: 20px;
+        z-index: 1001; /* Garante que o botão fique na frente de outros elementos */
+    }
+
+    .btn-voltar {
+        font-size: 28px; /* Aumenta um pouco o tamanho para facilitar o clique */
+    }
+    
+    header h1 {
+        font-size: 1.8em; /* Ajusta o tamanho do título */
+    }
+
+    .quadro-transparente {
+        margin-top: 80px; /* Reduz a margem superior para economizar espaço */
+        padding: 20px;
+    }
+}

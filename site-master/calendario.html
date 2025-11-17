@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Eventos</title>
+    <link rel="stylesheet" href="calendario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+  <a href="index.html" class="btn-voltar">
+    <i class="fas fa-arrow-left"></i>
+  </a>
+  <h1> Explore nossos Eventos</h1>
+  <p>Venha Participar Você também</p>
+</header>
+
+    <div class="admin-controls">
+        <button id="admin-login">Login Admin</button>
+        <span id="admin-status"></span>
+    </div>
+    
+    <div class="calendar-container" id="calendar-container">
+        <div class="calendar-header">
+            <h1 class="calendar-title">Calendário</h1>
+            <div class="calendar-nav">
+                <button id="prev-month">&lt; Mês Anterior</button>
+                <button id="next-month">Próximo Mês &gt;</button>
+            </div>
+        </div>
+        <div class="weekdays">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sáb</div>
+        </div>
+        <div class="days" id="calendar-days"></div>
+    </div>
+    
+    <div class="event-form" id="event-form">
+        <div class="form-container">
+            <div class="form-header">
+                <h2 class="form-title" id="form-title">Adicionar Evento</h2>
+                <button class="close-btn" id="close-form">&times;</button>
+            </div>
+            <form id="event-data">
+                <input type="hidden" id="event-date">
+                <input type="hidden" id="event-id">
+                <div class="form-group">
+                    <label for="event-title">Título</label>
+                    <input type="text" id="event-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-description">Descrição</label>
+                    <textarea id="event-description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="event-time">Hora</label>
+                    <input type="time" id="event-time">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="delete-btn" id="delete-btn">Excluir</button>
+                    <button type="button" class="cancel-btn" id="cancel-btn">Cancelar</button>
+                    <button type="submit" class="save-btn">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="login-modal" id="login-modal">
+        <div class="login-container">
+            <h2>Login de Administrador</h2>
+            <form id="login-form">
+                <div clas+..s="form-group">
+                    <label for="admin-username">Usuário</label>
+                    <input type="text" id="admin-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Senha</label>
+                    <input type="password" id="admin-password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="login-cancel">Cancelar</button>
+                    <button type="submit" class="save-btn">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="calendario.js"></script>
+    
+</body>
+</html>

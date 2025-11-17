@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Canto - CICALT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f0f4f8, #e0ecff);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 50px;
+      border-radius: 24px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeInSlide 1s ease;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1, h2 {
+      color: #003366;
+      font-weight: 700;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    h1::after, h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #0052cc;
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 4px;
+    }
+
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .highlight-box {
+      background: #f3f9ff;
+      border-left: 5px solid #0077cc;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .botoes {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 35px;
+    }
+
+    a.instagram-btn, a.btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    a.instagram-btn {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: white;
+    }
+
+    a.btn-voltar {
+      background: #003366;
+      color: white;
+    }
+
+    a.instagram-btn:hover,
+    a.btn-voltar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    a i {
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p, ul {
+        font-size: 16px;
+      }
+
+      a.instagram-btn, a.btn-voltar {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Canto</h1>
+    <p>
+      A aula de canto é um processo de instrução formal e individualizada (ou em grupo) que visa o desenvolvimento holístico da voz.  
+      Através de uma metodologia estruturada, o aluno internaliza técnicas vocais essenciais como respiração, afinação, projeção e articulação.
+    </p>
+
+    <p>
+      Além disso, explora-se o potencial vocal único de cada indivíduo, abrangendo extensão, timbre e possibilidades expressivas.  
+      A integração da teoria musical enriquece a compreensão e a interpretação das canções, que passam a ser abordadas em sua dimensão emocional e comunicativa.
+    </p>
+
+    <p>
+      Sob a orientação de um profissional, o aprendizado técnico e artístico eleva a confiança e a qualidade da performance vocal.  
+      Em suma, a aula de canto é um investimento no aprimoramento técnico e expressivo da voz, capacitando o indivíduo a cantar com consciência, precisão e arte.
+    </p>
+
+    <h2>Informações do Curso</h2>
+    <div class="highlight-box">
+      <p>
+        ✅ Curso <strong>gratuito</strong><br>
+        ⏳ Duração: <strong>1 ano e meio</strong><br>
+        📅 Aulas: <strong>segunda a sexta-feira</strong>, das <strong>7:30 às 11:30</strong> (turno da manhã)
+      </p>
+    </div>
+
+    <h2>Matrícula</h2>
+    <p>
+      Para fazer sua matrícula, compareça à secretaria da escola, das <strong>07h às 15h</strong>, no seguinte endereço:<br>
+      📍 <strong>R. Santo Agostinho, nº 1441, bairro Horto - BH</strong>
+    </p>
+
+    <p>Documentos necessários:</p>
+    <ul>
+      <li>📍 Histórico escolar ou declaração de escolaridade</li>
+      <li>📍 Comprovante de residência (preferencialmente conta de luz)</li>
+      <li>📍 Documento de identidade e CPF</li>
+      <li>📍 3 fotos 3x4</li>
+    </ul>
+
+    <p><strong>Previsão de matrícula:</strong> 10/06/2025</p>
+
+    <div class="botoes">
+      <a href="https://www.instagram.com/cicalt?igsh=Z3M5ZTk0cG5hZzlm" target="_blank" class="instagram-btn">
+        <i class="fab fa-instagram"></i> Siga-nos no Instagram
+      </a>
+      <a href="index.html" class="btn-voltar">
+        <i class="fas fa-arrow-left"></i> Voltar aos cursos
+      </a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CICALT - Site CICALT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ====== HEADER PRINCIPAL ====== -->
+  <header>
+    <div class="container">
+      <h1>CICALT</h1>
+      <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu-links" id="menu">
+          
+          <a href="calendario.html">Calendário</a>
+          <a href="https://cicalt.blogspot.com/">Blog</a>
+          <a href="historia.html">História</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="container">
+      <h2>Transforme seu futuro no Cicalt</h2>
+      <p>Qualidade e Inovação</p>
+    </div>
+  </section>
+
+  <!-- ====== HEADER DOS CURSOS ====== -->
+  <header class="header-cursos">
+    <h1>Explore nossos Cursos</h1>
+    <p>Encontre o programa ideal para moldar o seu futuro!</p>
+  </header>
+
+  <!-- ====== SEÇÃO DE CURSOS ====== -->
+  <section class="cursos">
+    <div class="curso-card">
+      <h2>Violão</h2>
+      <p>Liberte sua voz e transforme emoções em melodia.</p>
+      <a href="curso1.html">Saiba mais</a>
+    </div>
+
+    <div class="curso-card">
+      <h2>Canto</h2>
+      <p>Dedilhe seus sonhos e transforme acordes em histórias.</p>
+      <a href="curso2.html">Saiba mais</a>
+    </div>
+
+    <div class="curso-card">
+      <h2>Teatro</h2>
+      <p>Seja o herói da sua própria história e inspire plateias com sua arte.</p>
+      <a href="curso3.html">Saiba mais</a>
+    </div>
+
+    <div class="curso-card">
+      <h2>Figurino Cênico</h2>
+      <p>Transforme tecidos em sonhos e dê vida às fantasias que encantam o público.</p>
+      <a href="curso4.html">Saiba mais</a>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 CICALT Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ====== SCRIPT ====== -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
